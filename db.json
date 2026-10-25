@@ -1,0 +1,138 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@example.com",
+      "age": 28,
+      "department": "IT",
+      "designation": "Software Developer",
+      "salary": 65000
+    },
+    {
+      "id": 2,
+      "name": "Priya Verma",
+      "email": "priya.verma@example.com",
+      "age": 31,
+      "department": "HR",
+      "designation": "HR Manager",
+      "salary": 78000
+    },
+    {
+      "id": 3,
+      "name": "Amit Kumar",
+      "email": "amit.kumar@example.com",
+      "age": 26,
+      "department": "IT",
+      "designation": "Frontend Developer",
+      "salary": 58000
+    },
+    {
+      "id": 4,
+      "name": "Neha Singh",
+      "email": "neha.singh@example.com",
+      "age": 29,
+      "department": "Finance",
+      "designation": "Financial Analyst",
+      "salary": 62000
+    },
+    {
+      "id": 5,
+      "name": "Vikas Gupta",
+      "email": "vikas.gupta@example.com",
+      "age": 34,
+      "department": "IT",
+      "designation": "Senior Software Engineer",
+      "salary": 95000
+    },
+    {
+      "id": 6,
+      "name": "Anjali Mehta",
+      "email": "anjali.mehta@example.com",
+      "age": 27,
+      "department": "Marketing",
+      "designation": "Marketing Executive",
+      "salary": 52000
+    },
+    {
+      "id": 7,
+      "name": "Rohit Yadav",
+      "email": "rohit.yadav@example.com",
+      "age": 32,
+      "department": "IT",
+      "designation": "Backend Developer",
+      "salary": 82000
+    },
+    {
+      "id": 8,
+      "name": "Sneha Kapoor",
+      "email": "sneha.kapoor@example.com",
+      "age": 30,
+      "department": "Sales",
+      "designation": "Sales Manager",
+      "salary": 75000
+    },
+    {
+      "id": 9,
+      "name": "Karan Malhotra",
+      "email": "karan.malhotra@example.com",
+      "age": 25,
+      "department": "IT",
+      "designation": "Junior Developer",
+      "salary": 45000
+    },
+    {
+      "id": 10,
+      "name": "Pooja Agarwal",
+      "email": "pooja.agarwal@example.com",
+      "age": 33,
+      "department": "Operations",
+      "designation": "Operations Manager",
+      "salary": 85000
+    }
+  ],
+   "departments": [
+    {
+      "id": 1,
+      "name": "IT",
+      "manager": "Vikas Gupta",
+      "location": "Noida",
+      "employeeCount": 4
+    },
+    {
+      "id": 2,
+      "name": "HR",
+      "manager": "Priya Verma",
+      "location": "Delhi",
+      "employeeCount": 1
+    },
+    {
+      "id": 3,
+      "name": "Finance",
+      "manager": "Neha Singh",
+      "location": "Delhi",
+      "employeeCount": 1
+    },
+    {
+      "id": 4,
+      "name": "Marketing",
+      "manager": "Anjali Mehta",
+      "location": "Gurgaon",
+      "employeeCount": 1
+    },
+    {
+      "id": 5,
+      "name": "Sales",
+      "manager": "Sneha Kapoor",
+      "location": "Noida",
+      "employeeCount": 1
+    },
+    {
+      "id": 6,
+      "name": "Operations",
+      "manager": "Pooja Agarwal",
+      "location": "Gurgaon",
+      "employeeCount": 1
+    }
+  ]
+}

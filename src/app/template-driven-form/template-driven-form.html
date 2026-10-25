@@ -1,0 +1,96 @@
+
+<form #employeeForm="ngForm" (ngSubmit)="submit(employeeForm)" novalidate>
+  <h2>Employee Template-Driven Form</h2>
+
+  <!-- Name -->
+  <div>
+    <label for="name"> Name </label>
+
+    <input
+      id="name"
+      type="text"
+      name="name"
+      [(ngModel)]="employee.name"
+      #name="ngModel"
+      required
+      minlength="3"
+      placeholder="Enter your name"
+    />
+
+    @if ((name.touched || submitted) && name.invalid) {
+      @if (name.errors?.['required']) {
+        <span>Name is required</span>
+      }
+
+      @if (name.errors?.['minlength']) {
+        <span>Name must be at least 3 characters</span>
+      }
+    }
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label for="email"> Email </label>
+
+    <input
+      id="email"
+      type="email"
+      name="email"
+      [(ngModel)]="employee.email"
+      #email="ngModel"
+      required
+      email
+      placeholder="Enter your email"
+    />
+
+    @if ((email.touched || submitted) && email.invalid) {
+      @if (email.errors?.['required']) {
+        <span>Email is required</span>
+      }
+
+      @if (email.errors?.['email']) {
+        <span>Please enter a valid email</span>
+      }
+    }
+  </div>
+
+  <!-- Age -->
+  <div>
+    <label for="age"> Age </label>
+
+    <input
+      id="age"
+      type="number"
+      name="age"
+      [(ngModel)]="employee.age"
+      #age="ngModel"
+      required
+      min="18"
+      placeholder="Enter your age"
+    />
+
+    @if ((age.touched || submitted) && age.invalid) {
+      @if (age.errors?.['required']) {
+        <span>Age is required</span>
+      }
+
+      @if (age.errors?.['min']) {
+        <span>Age must be at least 18</span>
+      }
+    }
+  </div>
+
+  <!-- Submit -->
+  <button type="submit">Submit</button>
+
+  <!-- Form status -->
+  @if (submitted && employeeForm.invalid) {
+    <p>Please fix the validation errors before submitting.</p>
+  }
+</form>
+
+<hr />
+
+<h3>Form Value</h3>
+
+<pre>{{ employee | json }}</pre>

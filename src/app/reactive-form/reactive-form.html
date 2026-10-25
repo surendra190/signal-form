@@ -1,0 +1,52 @@
+<form [formGroup]="employeeForm" (ngSubmit)="submit()">
+  <h2>Employee Reactive Form</h2>
+
+  <!-- Name -->
+  <div>
+    <label for="name"> Name </label>
+
+    <input id="name" type="text" formControlName="name" placeholder="Enter your name" />
+
+    @if ((employeeForm.controls.name.touched || submitted) && employeeForm.controls.name.invalid) {
+      <span>Name is required and must be at least 3 characters</span>
+    }
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label for="email"> Email </label>
+
+    <input id="email" type="email" formControlName="email" placeholder="Enter your email" />
+
+    @if (
+      (employeeForm.controls.email.touched || submitted) && employeeForm.controls.email.invalid
+    ) {
+      <span>Email is required and must be valid</span>
+    }
+  </div>
+
+  <!-- Age -->
+  <div>
+    <label for="age"> Age </label>
+
+    <input id="age" type="number" formControlName="age" placeholder="Enter your age" />
+
+    @if ((employeeForm.controls.age.touched || submitted) && employeeForm.controls.age.invalid) {
+      <span>Age is required and must be at least 18</span>
+    }
+  </div>
+
+  <!-- Submit -->
+  <button type="submit">Submit</button>
+
+  <!-- Form status -->
+  @if (submitted && employeeForm.invalid) {
+    <p>Please fix the validation errors before submitting.</p>
+  }
+</form>
+
+<hr />
+
+<h3>Form Value</h3>
+
+<pre>{{ employeeForm.value | json }}</pre>

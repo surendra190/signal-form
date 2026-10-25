@@ -1,0 +1,7 @@
+<p>child works!</p>
+{{ data | json }}
+
+<input type="text" [(ngModel)]="newVal"  />
+<button (click)="updateData()">Update Data</button>
+
+{{ newVal | json }}
